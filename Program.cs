@@ -4,6 +4,25 @@ namespace SimpleNavalBattle
 {
     class Program
     {
+        public void Shot(int a, int b)
+        {
+
+            if (myMap1[a, b] == 0)
+            {
+                myMap1[a, b] = -1;
+                Console.WriteLine("Ooops! Slip-up.");
+                Console.WriteLine("Press 0 to change player.");
+                if (nextPlayer == '0')
+                    Console.Clear();
+            }
+            else
+            {
+                myMap1[a, b] = 2;
+                Shot(a, b);
+            }
+
+
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Enter your name:");
@@ -204,6 +223,7 @@ namespace SimpleNavalBattle
             Console.WriteLine("Press 0 to change player.");
             if (nextPlayer == '0')
                 Console.Clear();
+            int[,] myMap1 = new int[mapSize, mapSize];
             switch (mapNum1)
             {
                 case "1":
@@ -217,6 +237,7 @@ namespace SimpleNavalBattle
                                 Console.Write($"\t|{map1[i, k]}");
                             }
                         }
+                        myMap1 = map1;
                         break;
                     }
                 case "2":
@@ -230,6 +251,7 @@ namespace SimpleNavalBattle
                                 Console.Write($"\t|{map2[i, k]}");
                             }
                         }
+                        myMap1 = map2;
                         break;
                     }
                 case "3":
@@ -243,6 +265,7 @@ namespace SimpleNavalBattle
                                 Console.Write($"\t|{map3[i, k]}");
                             }
                         }
+                        myMap1 = map3;
                         break;
                     }
                 case "4":
@@ -256,6 +279,7 @@ namespace SimpleNavalBattle
                                 Console.Write($"\t|{map4[i, k]}");
                             }
                         }
+                        myMap1 = map4;
                         break;
                     }
 
@@ -281,6 +305,12 @@ namespace SimpleNavalBattle
 
                 }
             }
+            Console.WriteLine("Enter coordinates for shooting:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            Shot(a,b);
+
+            
         }
     }
 }
