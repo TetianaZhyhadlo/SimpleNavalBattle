@@ -351,7 +351,6 @@ namespace SimpleNavalBattle
                 Shot2(a, b);
                 for (int i = 0; i < mapSize - 1; i++)
                 {
-                    Console.WriteLine();
                     for (int k = 0; k < mapSize - 1; k++)
                     {
                         if (myMap1[i, k] == 1)
