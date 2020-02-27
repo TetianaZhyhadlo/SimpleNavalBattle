@@ -61,7 +61,7 @@ namespace SimpleNavalBattle
             {
                 for (int k = 0; k < 11; k++)
                 {
-                    Extensions.ToConsoleWrite(" |", ConsoleColor.DarkBlue);
+                    Extensions.ToConsoleWrite("\t|", ConsoleColor.DarkBlue);
                     if (k == 0 && i != 0)
                         Extensions.ToConsoleWrite($"{i}", ConsoleColor.White);
                     else if (i == 0 && k != 0)
@@ -73,7 +73,7 @@ namespace SimpleNavalBattle
                     else
                         Extensions.ToConsoleWrite(" ");
                 }
-                Extensions.ToConsole(" |", ConsoleColor.DarkBlue);
+                Extensions.ToConsole("\t|", ConsoleColor.DarkBlue);
             }
         }
         int mapNum2;
@@ -85,7 +85,7 @@ namespace SimpleNavalBattle
             {
                 for (int k = 0; k < 11; k++)
                 {
-                    Extensions.ToConsoleWrite(" |", ConsoleColor.DarkBlue);
+                    Extensions.ToConsoleWrite("\t|", ConsoleColor.DarkBlue);
                     if (k == 0 && i != 0)
                         Extensions.ToConsoleWrite($"{i}", ConsoleColor.White);
                     else if (i == 0 && k != 0)
@@ -97,7 +97,7 @@ namespace SimpleNavalBattle
                     else
                         Extensions.ToConsoleWrite(" ");
                 }
-                Extensions.ToConsole(" |", ConsoleColor.DarkBlue);
+                Extensions.ToConsole("\t|", ConsoleColor.DarkBlue);
             }
         }
         int mapNum3;
@@ -109,7 +109,7 @@ namespace SimpleNavalBattle
             {
                 for (int k = 0; k < 11; k++)
                 {
-                    Extensions.ToConsoleWrite(" |", ConsoleColor.DarkBlue);
+                    Extensions.ToConsoleWrite("\t|", ConsoleColor.DarkBlue);
                     if (k == 0 && i != 0)
                         Extensions.ToConsoleWrite($"{i}", ConsoleColor.White);
                     else if (i == 0 && k != 0)
@@ -121,7 +121,7 @@ namespace SimpleNavalBattle
                     else
                         Extensions.ToConsoleWrite(" ");
                 }
-                Extensions.ToConsole(" |", ConsoleColor.DarkBlue);
+                Extensions.ToConsole("\t|", ConsoleColor.DarkBlue);
             }
         }
         int mapNum4;
@@ -133,7 +133,7 @@ namespace SimpleNavalBattle
             {
                 for (int k = 0; k < 11; k++)
                 {
-                    Extensions.ToConsoleWrite(" |", ConsoleColor.DarkBlue);
+                    Extensions.ToConsoleWrite("\t|", ConsoleColor.DarkBlue);
                     if (k == 0 && i != 0)
                         Extensions.ToConsoleWrite($"{i}", ConsoleColor.White);
                     else if (i == 0 && k != 0)
@@ -145,7 +145,7 @@ namespace SimpleNavalBattle
                     else
                         Extensions.ToConsoleWrite(" ");
                 }
-                Extensions.ToConsole(" |", ConsoleColor.DarkBlue);
+                Extensions.ToConsole("\t|", ConsoleColor.DarkBlue);
             }
         }
         public void MapSelection()
@@ -159,32 +159,30 @@ namespace SimpleNavalBattle
                     Console.Clear();
                     ShipPlacement1();
                     Console.WriteLine();
-                    Console.WriteLine("Enemy Map");
-                    ShowField();
+
+                    
                 }
                 else if (num == mapNum2)
                 {
                     Console.Clear();
                     ShipPlacement2();
                     Console.WriteLine();
-                    Console.WriteLine("Enemy Map");
-                    ShowField();
+
+                    
                 }
                 else if (num == mapNum3)
                 {
                     Console.Clear();
                     ShipPlacement3();
                     Console.WriteLine();
-                    Console.WriteLine("Enemy Map");
-                    ShowField();
+                    
                 }
                 else if (num == mapNum4)
                 {
                     Console.Clear();
                     ShipPlacement4();
                     Console.WriteLine();
-                    Console.WriteLine("Enemy Map");
-                    ShowField();
+                   
                 }
             }
             else
@@ -203,6 +201,10 @@ namespace SimpleNavalBattle
                 }
             }
             return true;
+        }
+        public void Shooting(int a, int b)
+        {
+
         }
     }
 }
